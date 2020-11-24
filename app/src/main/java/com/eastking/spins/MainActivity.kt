@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
     fun addFragment(layout: Int, balance: Int){
         supportFragmentManager
             .beginTransaction()
-            .replace(R.id.gameActivityFragment, ResultFragment(layout, balance))
+            .add(R.id.gameActivityFragment, ResultFragment(layout, balance))
             .addToBackStack("result")
             .commit()
     }
